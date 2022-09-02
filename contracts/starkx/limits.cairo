@@ -3,6 +3,7 @@
 from starkware.cairo.common.alloc import alloc
 from contracts.starkx.structs import Order, Limit, Book
 from contracts.starkx.utils import initLimit
+from contracts.starkx.constants import MIN_VALUE
 
 ## Create a Limit structure as root and return a ptr to it.
 ##
