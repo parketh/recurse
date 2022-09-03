@@ -5,7 +5,7 @@ from starkware.starknet.testing.starknet import Starknet
 
 # The path to the contract source code.
 CONTRACT_FILE = os.path.join(
-    os.path.dirname(__file__), "..", "cairo/test_utils.cairo")
+    os.path.dirname(__file__), "../..", "cairo/starkx/test_limits.cairo")
 
 @pytest.mark.asyncio
 async def test_create_root():
@@ -15,5 +15,4 @@ async def test_create_root():
     # Deploy the contract
     contract = await starknet.deploy(CONTRACT_FILE)
 
-    # Call createRoot()
-    await contract.test_check_limit_exists().call()
+    await contract.test_create_root().call()
